@@ -1,0 +1,863 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.form-container {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* width: 83vw; */
+  margin-left: 16.5%;
+  /* background-color: blue; */
+  background-color: #fafbff;
+  padding-bottom: 50px;
+}
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.form {
+  /* background-color: green; */
+  background-color: white;
+  margin-top: 48px;
+  margin-right: 24px;
+  margin-left: 24px;
+  padding: 40px;
+  /* padding-top: 17px; */
+  margin-bottom: 48px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* background-color: aliceblue;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 500px;
+  padding: 20px;
+  width: 100%; */
+}
+.item-form {
+  width: 450px;
+}
+.label-and-error {
+  height: 100px;
+}
+.error {
+  color: indianred;
+}
+.mb {
+  margin-bottom: 100px;
+}
+.mt {
+  margin-top: 100px;
+}
+.description {
+  background-color: white;
+
+  border: 2px solid;
+  border-radius: 4px;
+  height: 100px;
+  margin-top: 8px;
+  color: black;
+  width: 400px;
+  border-color: lightgray;
+  padding-left: 8px;
+}
+.title {
+  color: black;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  padding-top: 28px;
+  padding-left: 24px;
+}
+
+.input-container {
+  display: flex;
+  margin-bottom: 40px;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+  height: 50px;
+  width: 100%;
+  margin: 50px; */
+}
+.customer-input-container {
+  height: 100px;
+}
+.ic1 {
+  margin-left: 150px;
+}
+.input {
+  background-color: white;
+
+  border: 2px solid;
+  border-radius: 4px;
+  height: 40px;
+  margin-top: 8px;
+  /* color: #eee; */
+  width: 400px;
+  padding-left: 8px;
+  color: black;
+  border-color: lightgray;
+  /* background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%; */
+}
+.customer-error {
+  margin-top: 10px;
+  color: indianred;
+}
+/* .cut {
+    background-color: #15172b;
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 76px;
+  } */
+
+.cut-short {
+  width: 50px;
+}
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
+.placeholder {
+  color: #65657b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+
+.submit-item {
+  margin-top: 60px;
+  height: 45px;
+  width: 200px;
+  cursor: pointer;
+  font-size: 15px;
+  background-color: #5851d9;
+  color: white;
+  border-radius: 4px;
+}
+.submit {
+  margin-top: 30px;
+  height: 45px;
+  width: 200px;
+  cursor: pointer;
+  font-size: 15px;
+  background-color: #5851d9;
+  color: white;
+  border-radius: 4px;
+  /* background-color: #08d;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px; */
+  /* justify-content: center;
+  align-items: center; */
+  /* margin-left: 50%; */
+  /* outline: 0; */
+  /* text-align: center; */
+}
+
+.submit:active {
+  background-color: #06b;
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  margin-top: 0%;
+  font-size: 0.9em;
+  width: 100%;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: aliceblue;
+  color: black;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 20px 25px;
+  font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.content-table td {
+  background-color: white;
+}
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+/* .content-table tbody tr:nth-of-type(even) {
+  background-color: white;
+} */
+
+/* .content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+} */
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+/* Left Side Navigation Bar */
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 255px;
+  margin-left: 10px;
+  background-color: white;
+}
+.unstyled {
+  display: flex;
+  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 0%;
+}
+
+.list-hover-slide button {
+  background: transparent;
+  border: none !important;
+  font-size: 20px;
+  transition: 0.35s ease color;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+.list-hover-slide button:hover {
+  color: blue;
+}
+
+.table-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 260px;
+  width: 80vw;
+  background-color: aliceblue;
+  padding: 0%;
+}
+/* buttons */
+.customers-addcustomer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin-bottom: -1%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  /* margin-left: */
+}
+
+.add-button {
+  margin-right: 3%;
+  background-color: #7303fc;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+  height: 40px;
+}
+
+i {
+  margin-right: 10px;
+}
+@font-face {
+  font-family: "YourFontName"; /*a name to be used later*/
+  src: url("http://domain.example/fonts/font.ttf"); /*URL to font*/
+}
+/* Then, trivially, to use the font on a specific element:
+/* 
+.classname {
+  font-family: 'YourFontName';
+} */
+/* .nav-button {
+  font-size: 20px;
+  /* margin-left: -%; */
+/* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: black;
+}
+
+i {
+  margin-right: 10px;
+}  */
+
+.left-nav-text {
+  font-size: 16px;
+  list-style: none;
+  padding-top: 20px;
+  /* margin-top: 30px;
+  margin-bottom: 30px; */
+  width: 100%;
+  /* background-color: yellow; */
+  height: 40px;
+  /* display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 60px; */
+}
+
+.left-nav-text:hover {
+  background: #eff8ff;
+}
+
+/* .left-nav-text:focus {
+  background: green;
+} */
+
+/* .left-nav-text:focus {
+  background-color: #eff8ff;
+} */
+.left-nav-text a {
+  color: black;
+  text-decoration: none;
+  height: 30px;
+}
+.left-nav-text a:hover {
+  color: #7303fc;
+}
+/* .left-nav-text a:focus {
+  color: #7303fc;
+} */
+/* .left-nav-text :focus {
+  background-color: #009879; */
+
+/* left: 0;
+  transition: 350ms; */
+
+/* .nav-text :active {
+  background-color: #009879;
+} */
+/* .nav-text a {
+  text-decoration: none;
+  color: #f5f5f5;
+
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+} */
+
+.nav-text a:hover {
+  background-color: #1a83ff;
+}
+
+/* .nav-menu-items {
+    width: 100%;
+  } */
+
+.navbar-toggle {
+  background-color: #060b26;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+span {
+  margin-left: 16px;
+}
+
+/*
+PopUp Modal CSS
+*/
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-inner {
+  position: relative;
+  padding: 32px;
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+}
+.popup-inner .close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: red;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.select-list {
+  height: 150px;
+  width: 440px;
+  border: none;
+}
+
+/* .list-option { */
+/* display: flex;
+  justify-content: space-between; */
+
+/* background-color: black; */
+/* justify-content: space-around; */
+/* } */
+.list-div {
+  width: 1000px;
+}
+.table-row-0 {
+  color: green;
+}
+.table-row-1 {
+  background-color: red;
+}
+.button-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+/*
+Select Box
+*/
+
+.multiselect {
+  width: 200px;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+}
+
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: #1e90ff;
+}
+
+/* invoice form  */
+.form-top-header {
+  display: flex;
+
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-top-header h1 {
+  padding-left: 40px;
+}
+.form-top-header button {
+  margin-right: 28px;
+  /* margin-right: 50px; */
+}
+.add-button {
+  align-items: center;
+  appearance: none;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: white;
+  background-color: #7303fc;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 36px;
+  justify-content: center;
+  letter-spacing: 0.0892857em;
+  line-height: normal;
+  min-width: 64px;
+  outline: none;
+  overflow: visible;
+  padding: 0 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  will-change: transform, opacity;
+}
+
+.form-first-div {
+  display: flex;
+  height: 200px;
+  padding-left: 40px;
+  padding-right: 30px;
+  /* background-color: yellow; */
+}
+.div-f1 {
+  background-color: white;
+  margin: 20px;
+  width: 400px;
+  height: 125px;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+.invoice-bill-to {
+  /* border-color: lightgray;
+  border: 2px solid;
+  border-radius: 4px; */
+  border: 0px white;
+
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: gray;
+
+  /* width: 400px; */
+}
+
+.invoice-customer-details-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.invoice-bill-to-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #7303fc;
+}
+.div-dates {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.input-dates {
+  /* padding-left: 25px;
+  background: url("https://static.thenounproject.com/png/101791-200.png")
+    no-repeat left;
+  background-size: 20px; */
+  /* position: relative;
+  padding-left: -100px; */
+  width: 200px;
+  padding-left: 25px;
+}
+
+.left-nav-text a.active {
+  color: #7600dc;
+  /* width: 100%;
+  background-color: #7303fc; */
+}
+/* .left-nav-text div {
+  background: #eff8ff;
+} */
+/* .active a {
+  
+  background-color: #009879;
+} */
+
+.div-numbers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.div-f2 {
+  width: 600px;
+  margin-left: 80px;
+  padding-left: 112px;
+}
+
+.div-i-input i {
+  position: absolute;
+
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.fa-hashtag {
+  color: lightgray;
+}
+
+/* input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+} */
+
+.form-second-div {
+  /* display: flex; */
+  padding-top: 10px;
+  /* height: 200px; */
+  padding-left: 40px;
+  padding-right: 30px;
+  /* background-color: #009879; */
+  padding-bottom: 10px;
+}
+.table-header {
+  height: 50px;
+  /* background-color: yellow; */
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+  align-items: center;
+  margin-left: 20px;
+}
+.modal-header {
+  display: flex;
+  /* height: 50px; */
+  /* background-color: yellow; */
+  justify-content: space-around;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 400px;
+  padding-right: 20px;
+  padding-left: 20px;
+  align-items: center;
+  background-color: #fafbff;
+}
+.table-header-row {
+  width: 40px;
+}
+.table-row {
+  /* display: flex; */
+  /* height: 200px; */
+  background-color: white;
+  /* overflow: auto; */
+  margin-left: 20px;
+  /* margin-right: 20px; */
+  /* padding-left: 20px;
+  padding-right: 20px; */
+}
+
+.table-row-item {
+  height: 60px;
+  /* background-color: orange; */
+  /* width: 100%; */
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  margin-top: 1px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+  align-items: center;
+  /* margin-left: 20px; */
+}
+.table-row-input {
+  width: 50px;
+  border-radius: 4px;
+  border-width: 0.2px;
+  /* border-color: lightgray; */
+}
+
+.table-button {
+  margin-top: 10px;
+  margin-left: 500px;
+}
+
+.add-item-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #7303fc;
+}
+.fa-light {
+  /* color: white; */
+  position: relative;
+}
+
+.form-third-div {
+  padding-left: 40px;
+  padding-right: 30px;
+  display: flex;
+}
+.notes {
+  background-color: white;
+  border: 2px solid;
+  border-radius: 4px;
+  height: 100px;
+  color: black;
+  width: 500px;
+  border-color: lightgray;
+  padding-left: 8px;
+}
+/*
+Invoice-Form Third main div
+*/
+.form-third-div-f2 {
+  margin-left: 100px;
+
+  background-color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 500px;
+}
+
+.item-card-field {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.item-card-field-quantity-price {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  margin-right: 30px;
+}
+.item-card-name {
+  color: gray;
+}
+.hr-line {
+  margin-top: 30px;
+  background: gray;
+  color: gray;
+  border-color: lightgray;
+}
+.total-amount {
+  color: #7600dc;
+}
+.form-item-cards {
+  /* height: 120px; */
+  padding-right: 5px;
+  /* overflow: auto; */
+}
+.item-card-quantity {
+  /* margin-right: 500px; */
+  margin-right: 10px;
+}
+
+.modal-title {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7600dc;
+}
+
+.delete-button-table-cell {
+  display: flex;
+  justify-content: space-around;
+}
+.delete-button {
+  margin-left: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.row-last-cell {
+  /* width: 40px; */
+  margin-right: 10px;
+}
+/* .fa-trash {
+  height: 10px;
+} */
+.table-cell {
+  width: 100px;
+  margin-right: 15px;
+}
+
+/*
+Empty Lists
+*/
+
+.empty-invoice-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.empty-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  /* background-color: #009879; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.empty-box-text {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
