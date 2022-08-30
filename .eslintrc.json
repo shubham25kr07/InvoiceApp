@@ -1,0 +1,24 @@
+{
+  "env": {
+    "browser": true
+  },
+  "extends": ["react-app", "react-app/jest"],
+  "rules": {
+    "eqeqeq": "error",
+    "no-console": "warn",
+    "semi": ["error", "always"],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["warn", "single"],
+    "no-unused-vars": "error",
+    "camelcase": [
+      "error",
+      { "properties": "never", "ignoreDestructuring": true }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["bin/*.js", "lib/*.js"],
+      "excludedFiles": "*.test.js"
+    }
+  ]
+}
