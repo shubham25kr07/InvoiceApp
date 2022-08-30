@@ -5,7 +5,7 @@ const getRandomString = (name) => {
   if (name == "") return `${num}`;
   return `name${num}`;
 };
-test.skip("item add page", async ({ page }) => {
+test("item add page", async ({ page }) => {
   await page.goto("http://localhost:3000/item/");
   await page.click("text = Add Item");
 
@@ -16,7 +16,7 @@ test.skip("item add page", async ({ page }) => {
   await page.waitForTimeout(5000);
 });
 
-test("invoice add page", async ({ page }) => {
+test.skip("invoice add page", async ({ page }) => {
   await page.goto("http://localhost:3000/invoice/");
   await page.click("text = Add Invoice");
   // await page.click("text = Change");
@@ -31,4 +31,32 @@ test("invoice add page", async ({ page }) => {
   // await page.fill("textarea[name='Item_Description']", "This is invoice");
   // await page.click('button:text("Save Invoice")');
   // await page.waitForTimeout(5000);
+  await page.locator("text=Add Invoice").click();
+  // Click text=Change
+  await page.locator("text=Change").click();
+  // Click select
+  await page.locator("select").click();
+  // Click #form2 >> text=Add
+  await page.locator("#form2 >> text=Add").click();
+  // Fill input[name="DueDate"]
+  await page.locator('input[name="DueDate"]').fill("2022-08-26");
+  // Click text=Add an Item
+  await page.locator("text=Add an Item").click();
+  // Click select
+  await page.locator("select").click();
+  // Click select
+  await page.locator("select").click({
+    modifiers: ["Meta"],
+  });
+  // Click select
+  await page.locator("select").click({
+    modifiers: ["Meta"],
+  });
+  // Click #form2 >> text=Add
+  await page.locator("#form2 >> text=Add").click();
+  // Click input[name="\30 "]
+  await page.locator('input[name="\\30 "]').click();
+  // Fill input[name="\30 "]
+  await page.locator('input[name="\\30 "]').fill("02");
+  await page.locator("text=Save Invoice").click();
 });
